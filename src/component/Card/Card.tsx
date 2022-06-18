@@ -12,6 +12,7 @@ const Card = (props: TCard) => {
 
 	const description: TDescription = (selected && hovered) ? 'Котэ не одобряет?' : 'Сказочное заморское яство';
 
+	const bonusQty = (+weight >=1) ? parseInt(weight) : undefined;
 	const handleClick = (isSelect: boolean) => {
 		return (event: React.MouseEvent) => setSelected(!isSelect);
 	}
@@ -45,8 +46,8 @@ const Card = (props: TCard) => {
 					<p className='card__brand'>{brand}</p>
 					<p className='card__taste'>{taste}</p>
 					<p className='card__caption'>
-						<span>{qty} порций</span><br />
-						<span>{bonus}</span>
+						<span><b>{qty}</b> порций</span><br />
+						<span><b>{bonusQty}</b>{bonus}</span>
 					</p>
 					<p className='card__weight'>{weight}
 						<br /><sub className='weight__unit'>кг</sub>
