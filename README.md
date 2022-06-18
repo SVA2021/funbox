@@ -12,4 +12,5 @@ You can see check my portfolio at here[here](https://sva2021.github.io/MyPortfol
 
 ## Comments to test
 
- -Font Exo2 connected from GoogleFonts, because otf file have partially support by IE 11
+ - Font Exo2 connected from GoogleFonts, because otf file have partially support by IE 11
+ - Pixel perfect checking was made OK
