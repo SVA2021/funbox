@@ -4,8 +4,8 @@
 	height: 509px;
 	margin: 25px 2vw;
 
-	@include media-sm {
-		margin: 25px 0;
+	@include media-lg {
+		margin: 25px 40px;
 	}
 }
 
@@ -111,6 +111,7 @@
 
 	@include retina {
 		background-image: url('../img/Photo@2x.png');
+		background-size: contain;
 	}
 }
 
@@ -164,6 +165,7 @@
 
 .card__detailed {
 	@include caption;
+	font-size: $font-size-details;
 	position: absolute;
 	width: 100%;
 	bottom: 0;
