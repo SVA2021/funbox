@@ -1,41 +1,46 @@
 const BRAND = 'Нямушка';
-const BONUS = [
-	'10 порций мышь\n' + 'в подарок',
-	'40 порций 2 мыши в подарок',
-	'100 порций 5 мышей в подарок заказчик доволен',
-] as const;
+const BONUS = ['мышь в подарок', '2 мыши в подарок', '5 мышей в подарок заказчик доволен',];
 const WEIGHT = ['0,5', '2', '5'];
+const QTY = ['10', '40', '100'];
 const TASTE = ['с фуа-гра', 'с рыбой', 'с курой'];
+const DETAILED = ['Печень утки разварная с артишоками.', 'Головы щучьи с чесноком да свежайшая сёмгушка.', 'Филе из цыплят с трюфелями в бульоне.'];
 
 type TBonus = typeof BONUS[number];
-type TTaste = typeof TASTE[number];
 type TWeight = typeof WEIGHT[number];
+
+export type TQty = typeof QTY[number];
+export type TTaste = typeof TASTE[number];
+export type TDetailed = typeof DETAILED[number];
 export type TDescription = 'Сказочное заморское яство' | 'Котэ не одобряет?';
 
 export interface TCard {
 	brand: typeof BRAND
 	taste: TTaste
 	weight: TWeight
+	qty: TQty
 	bonus: TBonus
-	description: TDescription
+	disabled: boolean
+	detailed: TDetailed
 }
 
-export const data: TCard = {
-	brand: BRAND,
-	taste: 'с курой',
-	weight: '0,5',
-	bonus: BONUS[2],
-	description: 'Сказочное заморское яство',
+//*********Fake data to result demonstration */
+
+export const FakeDataDefault: TCard[] = [];
+export const FakeDataDisabled: TCard[] = [];
+
+const fillData = (array: TCard[], disabled: boolean): void => {
+	for (let i = 0; i < 3; i++) {
+		array.push({
+			brand: BRAND,
+			taste: TASTE[i],
+			weight: WEIGHT[i],
+			qty: QTY[i],
+			bonus: BONUS[i],
+			detailed: DETAILED[i],
+			disabled: disabled,
+		});
+	}
 }
 
-export const FakeData: TCard[] = [];
-
-for (let i = 0; i < 3; i++) {
-	FakeData.push({
-		brand: BRAND,
-		taste: TASTE[i],
-		weight: WEIGHT[i],
-		bonus: BONUS[i],
-		description: 'Сказочное заморское яство',
-	});
-}
+fillData(FakeDataDefault, false);
+fillData(FakeDataDisabled, true);
