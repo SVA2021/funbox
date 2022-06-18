@@ -1,0 +1,35 @@
+//********Fonts **********/
+
+.hero-title {
+	font: normal $font-size-hero/$line-height-hero $font-hero;
+	color: $white;
+	text-shadow: 0px 1px 1px $black;
+	text-align: center;
+}
+
+.title {
+	font: bold $font-size-title $font-text;
+}
+
+.subtitle {
+	font: bold $font-size-subtitle $font-text;
+}
+
+.plaintext {
+	font: normal $font-size-text $font-text;
+}
+
+//********Wrapper **********/
+
+.wrapper {
+	margin: 0 auto;
+	min-height: 100vh;
+	min-width: $mq-xs;
+	padding-bottom: 150px;
+	background-image: $gradient, url('../img/Pattern.png');
+	background-image: $gradient, url('../img/Pattern@2x.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+}

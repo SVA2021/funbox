@@ -1,0 +1,65 @@
+//!*************COLORS **********************/
+$blue_1:#1698D9;
+$blue_2:#2EA8E6;
+$blue_3:#22A7E9; //border hover
+$red_1: #D91667;
+$red_2: #E52E7A;
+$red_3: #E62E7A; //border hover
+$yellow: #FFFF66;
+
+$black: #000;
+$white: #fff;
+$dark: #0A0A0A;
+$light: #F2F2F2;
+$gray_1: #666666;
+$gray_2: #B3B3B3;
+
+$gradient: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%);
+
+//**************MEDIA QUERIES ****************/
+
+$mq-lg: 1280px;
+$mq-sm: 768px;
+$mq-xs: 360px;
+
+//**************FONTS****************/
+$font-hero: 'Exo 2',
+Arial,
+sans-serif;
+$font-text:"Trebuchet MS",
+Helvetica,
+sans-serif;
+
+//**FONT-SIZE FOR REM CALCULATION */
+
+$html-font-size: 16px;
+
+//****************FONT-SIZES**********/
+$font-size-hero: rem(36);
+$line-height-hero: rem(42);
+
+$font-size-title: rem(48);
+$font-size-subtitle: rem(24);
+$font-size-text: rem(16);
+$font-size-caption: rem(13);
+
+//**********border-radius
+$border-radius-default: 12px;
+
+//! templates of media queries
+
+// @include media-xs {
+
+// }
+
+// @include media-sm {
+
+// }
+
+// @include media-md {
+
+// }
+
+// @include media-lg {
+
+// }

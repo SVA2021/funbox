@@ -1,0 +1,48 @@
+//******************** Media Queries ***********************/
+
+@mixin media-xs {
+	@media (min-width: #{$mq-xs}) {
+		@content;
+	}
+}
+
+@mixin media-sm {
+	@media (min-width: #{$mq-sm}) {
+		@content;
+	}
+}
+
+// @mixin media-md {
+// 	@media (min-width: #{$mq-md}) {
+// 		@content;
+// 	}
+// }
+
+@mixin media-lg {
+	@media (min-width: #{$mq-lg}) {
+		@content;
+	}
+}
+
+// @mixin media-xl {
+// 	@media (min-width: #{$mq-xl}) {
+// 		@content;
+// 	}
+// }
+
+
+@mixin title {
+	font: bold $font-size-title $font-text;
+}
+
+@mixin subtitle {
+	font: bold $font-size-subtitle $font-text;
+}
+
+@mixin plaintext {
+	font: normal $font-size-text $font-text;
+}
+
+@mixin caption {
+	font: normal $font-size-caption $font-text;
+}
