@@ -27,9 +27,12 @@
 	min-width: $mq-xs;
 	padding-bottom: 150px;
 	background-image: $gradient, url('../img/Pattern.png');
-	background-image: $gradient, url('../img/Pattern@2x.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center center;
+
+	@include retina {
+		background-image: $gradient, url('../img/Pattern@2x.png');
+	}
 }

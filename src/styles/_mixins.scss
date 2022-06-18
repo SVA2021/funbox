@@ -12,24 +12,17 @@
 	}
 }
 
-// @mixin media-md {
-// 	@media (min-width: #{$mq-md}) {
-// 		@content;
-// 	}
-// }
-
 @mixin media-lg {
 	@media (min-width: #{$mq-lg}) {
 		@content;
 	}
 }
 
-// @mixin media-xl {
-// 	@media (min-width: #{$mq-xl}) {
-// 		@content;
-// 	}
-// }
-
+@mixin retina {
+	@media (-webkit-min-device-pixel-ratio: 2) {
+		@content;
+	}
+}
 
 @mixin title {
 	font: bold $font-size-title $font-text;

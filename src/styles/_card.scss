@@ -3,6 +3,10 @@
 	width: 320px;
 	height: 509px;
 	margin: 25px 2vw;
+
+	@include media-sm {
+		margin: 25px 0;
+	}
 }
 
 .card--default {
@@ -102,10 +106,12 @@
 	padding-left: 51px;
 	border-radius: $border-radius-default;
 	background-image: url('../img/Photo.png');
-	background-image: url('../img/Photo@2x.png');
-	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: -24px 208px;
+
+	@include retina {
+		background-image: url('../img/Photo@2x.png');
+	}
 }
 
 .card__description {
@@ -115,6 +121,7 @@
 
 .card__brand {
 	@include title;
+	margin-top: 5px;
 	margin-left: -3px;
 	color: $black;
 }
@@ -125,9 +132,9 @@
 }
 
 .card__caption {
-	@include plaintext;
+	@include caption;
 	margin-top: 15px;
-	width: 70%;
+	width: 60%;
 	color: $gray_1;
 }
 
@@ -148,9 +155,9 @@
 	justify-content: center;
 
 	background-color: $blue_1;
-
+	line-height: 2.5rem;
 	.weight__unit {
-		font-size: 0.5em;
+		font-size: rem(20);
 		line-height: 1em;
 	}
 }
