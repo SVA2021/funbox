@@ -1,11 +1,15 @@
-import React from 'react';
+import CardList from './component/CardList/CardList';
+import { FakeDataDefault, FakeDataDisabled } from './data/data';
+import './styles/style.scss';
 
-function App() {
-  return (
-    <div >
-          Learn React
-    </div>
-  );
+const App = () => {
+	return (
+		<div className='wrapper'>
+			<h1 className='hero-title'>Funbox Quality Test</h1>
+			<CardList data={FakeDataDefault} />
+			<CardList data={FakeDataDisabled} />
+		</div>
+	);
 }
 
 export default App;
